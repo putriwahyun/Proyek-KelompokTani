@@ -187,4 +187,55 @@ body{
       display: none;
     }
 }
-  
+
+.main-content{
+    margin-left: 345;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+header label span{
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+.user-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper img{
+    margin-right: 1rem;
+}
+
+.welcome{
+    padding: 1rem 1.5rem;
+}
+
+main{
+    padding: 1rem 1.5rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.card-single{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.cards h6{
+    color: grey;
+}

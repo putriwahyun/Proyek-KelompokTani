@@ -19,7 +19,7 @@
         </div>
         <ul class="nav_list">
             <li>
-                <a href="#">
+                <a href="index.php?p=dashboard">
                     <i class='bx bxs-home'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
