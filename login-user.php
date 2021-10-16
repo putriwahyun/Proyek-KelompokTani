@@ -8,20 +8,14 @@
     <link rel="stylesheet" href="style_login.css">
 </head>
 <body>
-    <div style="color: black; position: absolute; left: 330px; top: 90px; font-size: 40px; font-weight: bold;">
+    <div style="color: black; position: absolute; left: 330px; top: 110px; font-size: 40px; font-weight: bold;">
         GAPOKTAN KECAMATAN JOMBANG
     </div>
     <div class="container">
-        <form method="post" action="cek_login.php">
+        <form method="post" action="index.php?p=dashboard">
             <div style="height: 35px;"></div>
             <input type="text" name="user" placeholder="Masukkan Username"><br>
             <input type="password" name="pass" placeholder="Masukkan Password"><br>
-            <select name="level" id="level" style="width: 100%">
-                <option value="pilih" selected disabled>Pilih Level User</option>
-                <option value="kepalapoktan">Kepala Kelompok Tani</option>
-                <option value="anggotapoktan">Anggota Kelompok Tani</option>
-                <option value="admindinas">Admin Dinas</option>
-            </select>
             <div class="vertical-center">
                 <button type="submit" name="submit">Masuk</button>
             </div>
