@@ -164,6 +164,7 @@ body{
     line-height: 50px;
     font-size: 18px;
     border-radius: 12px;
+    padding-right: 30px;
 }
 
 .home-section{
@@ -188,8 +189,12 @@ body{
     }
 }
 
-.main-content{
-    margin-left: 345;
+.main-content h4{
+    font-weight: 800;
+}
+
+.main-content h6{
+    font-size: 1rem;
 }
 
 header{
@@ -198,11 +203,6 @@ header{
     padding: 1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
-}
-
-header label span{
-    font-size: 1.7rem;
-    padding-right: 1rem;
 }
 
 .user-wrapper{
@@ -228,14 +228,32 @@ main{
     grid-gap: 2rem;
 }
 
-.card-single{
+.cards-single{
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     padding: 2rem;
     border-radius: 2px;
+    box-shadow: 3px 3px 18px #32C38C;
+}
+
+.cards-single .bx{
+    font-size: 2em;
+}
+
+.cards-single span{
+    font-weight: 800;
 }
 
 .cards h6{
     color: grey;
+    font-size: rem;
+}
+
+.cards h1{
+    font-size: 2rem;
+}
+
+.tambah{
+    padding: 10pt 10pt 10pt 0;
 }
