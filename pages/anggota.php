@@ -14,7 +14,7 @@
 
     <div class="container">
       <div class="tambah">
-        <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-anggota" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
+        <button type="button" class="btn btn-primary"><a href="pages/tambah-anggota.php" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
         <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
@@ -30,18 +30,6 @@
         </thead>
         <tbody>
           <tr>
-<<<<<<< HEAD
-              <td scope="col">1</td>
-              <td scope="col">Suwarno</td>
-              <td scope="col">350611151110001</td>
-              <td scope="col">Dsn. Gabus</td>
-              <td scope="col">78239</td>
-              <td scope="col">
-                <a href="/pages/edit-anggota.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
-              </td>
-          </tr>
-=======
             <?php
               $nomor = 1;
               $query = "SELECT *FROM tbanggota";
@@ -64,7 +52,6 @@
                   }
                 }
             ?>
->>>>>>> 8937ffc2874a66b97cd7b49610e78177dff83320
         </tbody>
       </table>
     </div>
