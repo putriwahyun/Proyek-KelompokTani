@@ -10,9 +10,9 @@ $tema = $_POST['tema'];
 if(isset($_POST['Submit'])){
     extract($_POST);
 
-    $sql = "INSERT INTO tbpenyuluhan VALUES('$kd_penyuluhan', '$nm_penyuluh', '$tgl_penyuluhan', $tempat, '$tema')";
+    $sql = "INSERT INTO tbpenyuluhan VALUES('$kd_penyuluhan', '$nm_penyuluh', '$tgl_penyuluhan', '$tempat', '$tema')";
     $query = mysqli_query($db, $sql);
 
-    header("location:../index.php?p=anggota");
+    header("location:../index.php?p=penyuluhan");
 }
 ?>

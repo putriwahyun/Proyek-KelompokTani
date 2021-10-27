@@ -21,4 +21,3 @@ if(isset($_POST['Submit'])){
 
     header("location:../index.php?p=anggota");
 }
-?>
