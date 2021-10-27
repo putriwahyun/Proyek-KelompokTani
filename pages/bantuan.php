@@ -29,11 +29,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td scope="col">No</th>
-                        <td scope="col">ID Anggota</th>
-                        <td scope="col">No</th>
-                        <td scope="col">ID Anggota</th>
-                        <td scope="col">No</th>
+                        <td scope="col">1</th>
+                        <td scope="col">Diesel</th>
+                        <td scope="col">1121918371</th>
+                        <td scope="col">19-06-2019</th>
+                        <td scope="col">APBD</th>
                         <td scope="col">
                             <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
                             <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>

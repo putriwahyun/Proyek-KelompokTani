@@ -15,7 +15,7 @@
         LOGIN ADMIN
     </div>
     <div class="container">
-        <form method="post" action="index.php?p=dashboard">
+        <form method="post" action="cek-login.php">
             <div style="height: 35px;"></div>
             <input type="text" name="user" placeholder="Masukkan Username"><br>
             <input type="password" name="pass" placeholder="Masukkan Password"><br>

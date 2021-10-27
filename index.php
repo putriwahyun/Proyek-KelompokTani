@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    include 'koneksi.php';
+
+    $tgl = date('Y-m-d');
+
+    if(isset($_SESSION['sesi']) && !empty($_SESSION['sesi'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +70,7 @@
                 <span class="tooltip">Data Penyuluhan</span>
             </li>
             <li>
-                <a href="#">
+                <a href="index.php?p=laporan">
                     <i class='bx bxs-book-alt'></i>
                     <span class="links_name">Data Laporan</span>
                 </a>
@@ -98,4 +108,10 @@
         } );
     </script>
 </body>
-</html>
+
+<?php
+} else{
+    echo "<script>aler('Anda Harus Login Dahulu!');</script>";
+    header('location:login-admin.php');
+}
+?>
