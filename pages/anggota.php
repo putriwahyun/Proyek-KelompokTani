@@ -29,48 +29,39 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-<<<<<<< HEAD
-              <td scope="col">1</td>
-              <td scope="col">Suwarno</td>
-              <td scope="col">350611151110001</td>
-              <td scope="col">Dsn. Gabus</td>
-              <td scope="col">78239</td>
-              <td scope="col">
-                <a href="/pages/edit-anggota.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
-              </td>
-          </tr>
-=======
-            <?php
-              $nomor = 1;
-              $query = "SELECT *FROM tbanggota";
-              $q_tampil_anggota = mysqli_query($db, $query);
-              if(mysqli_num_rows($q_tampil_anggota)>0){
-                  while($r_tampil_anggota=mysqli_fetch_array($q_tampil_anggota)){
-            ?>
-                <td><?php echo $nomor;?></td>
-                <td><?php echo $r_tampil_anggota['nik'];?></td>
-                <td><?php echo $r_tampil_anggota['nm_anggota'];?></td>
-                <td><?php echo $r_tampil_anggota['alamat'];?></td>
-                <td><?php echo $r_tampil_anggota['luas_tanam'];?></td>
-                <td scope="col">
-                  <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
+          <?php
+          $nomor = 1;
+          $query = "SELECT * FROM tbanggota";
+          $q_tampil_anggota = mysqli_query($db, $query);
+
+          if (mysqli_num_rows($q_tampil_anggota) > 0) {
+            while ($r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota)) {
+          ?>
+              <tr>
+                <td><?php echo $nomor; ?></td>
+                <td><?php echo $r_tampil_anggota['nik']; ?></td>
+                <td><?php echo $r_tampil_anggota['nm_anggota']; ?></td>
+                <td><?php echo $r_tampil_anggota['alamat']; ?></td>
+                <td><?php echo $r_tampil_anggota['luas_tanam']; ?></td>
+                <td>
+                  <a href="index.php?p=edit-anggota&nik=<?php echo $r_tampil_anggota['nik'];?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
                   <button type="button" class="btn btn-danger"><a href="proses/anggota-hapus.php?nik=<?php echo $r_tampil_anggota['nik'];?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
                 </td>
-            </tr>
-            <?php
-            $nomor++;
-                  }
-                }
-            ?>
->>>>>>> 8937ffc2874a66b97cd7b49610e78177dff83320
+              </tr>
+          <?php
+              $nomor++;
+            }
+          } else {
+            echo "";
+          }
+          ?>
         </tbody>
       </table>
     </div>
   </div>
-  <script>$(document).ready(function() {
-    $('#example').DataTable();
-      } );
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable();
+    });
   </script>
 </body>
