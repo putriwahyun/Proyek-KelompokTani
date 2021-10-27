@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tambah Anggota</title>
+	<title>Edit Anggota</title>
 	<style type="text/css" media="screen">
 		table {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;}
 		input {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;height: 20px;}
@@ -10,7 +10,7 @@
 <div style="border:0; padding:10px; width:auto; height:auto;">
 <form action="action-input-data.php" method="POST" name="form-input-data">
     <div class="latar" style="width: auto; background-color: teal; padding: 5px; border-radius: 5px; text-align: center;">
-        <h3 style="color: white;">Tambah Data Anggota Kelompok Tani</h3>
+        <h3 style="color: white;">Edit Data Anggota Kelompok Tani</h3>
     </div>
 	<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr height="20">

@@ -14,7 +14,7 @@
 
     <div class="container">
       <div class="tambah">
-        <button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Anggota</button>
+        <a href="pages/tambah-anggota.php"><button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Anggota</button></a>
         <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
@@ -36,7 +36,7 @@
               <td scope="col">Dsn. Gabus</td>
               <td scope="col">78239</td>
               <td scope="col">
-                <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
+                <a href="/pages/edit-anggota.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
                 <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
               </td>
           </tr>

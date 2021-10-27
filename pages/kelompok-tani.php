@@ -14,7 +14,7 @@
 
         <div class="container">
             <div class="tambah">
-                <button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Kelompok</button>
+                <a href="pages/tambah-poktan.php"><button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Kelompok</button></a>
             </div>
             <table id="example" class="table table-striped " style="width:100%">
                 <thead>
@@ -35,7 +35,7 @@
                         <td scope="col">Dsn. Gabus Ds. Gabus</th>
                         <td scope="col">Pemula</td>
                         <td scope="col">
-                            <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
+                            <a href="/pages/edit-poktan.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
                             <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
                         </td>
                     </tr>

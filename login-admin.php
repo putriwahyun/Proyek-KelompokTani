@@ -11,7 +11,7 @@
     <div style="color: black; position: absolute; left: 330px; top: 90px; font-size: 40px; font-weight: bold;">
         GAPOKTAN KECAMATAN JOMBANG
     </div>
-    <div style="color: black; position: absolute; left: 580px; top: 150px; font-size: 30px; font-weight: bold;">
+    <div style="color: black; position: absolute; left: 580px; top: 150px; font-size: 35px; font-weight: bold;">
         LOGIN ADMIN
     </div>
     <div class="container">

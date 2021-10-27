@@ -14,7 +14,7 @@
 
         <div class="container">
             <div class="tambah">
-                <button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Penyuluhan</button>
+                <a href="pages/tambah-penyuluhan.php"><button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Penyuluhan</button></a>
             </div>
             <table id="example" class="table table-striped " style="width:100%">
                 <thead>
@@ -29,13 +29,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td scope="col">No</th>
-                        <td scope="col">ID Anggota</th>
-                        <td scope="col">No</th>
-                        <td scope="col">ID Anggota</th>
-                        <td scope="col">No</th>
+                        <td scope="col">1</th>
+                        <td scope="col">Greselia Putri</th>
+                        <td scope="col">20 Oktober 2021</th>
+                        <td scope="col">Tunggorono Jombang</th>
+                        <td scope="col">Pembuatan Pupuk Organik</th>
                         <td scope="col">
-                            <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
+                            <a href="/pages/edit-penyuluhan.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
                             <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
                         </td>
                     </tr>
