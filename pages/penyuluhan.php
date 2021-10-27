@@ -20,6 +20,7 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
+                        <th scope="col">Kode</th>
                         <th scope="col">Nama Penyuluh</th>
                         <th scope="col">Tanggal Penyuluhan</th>
                         <th scope="col">Tempat</th>
