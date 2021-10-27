@@ -14,7 +14,7 @@
 
         <div class="container">
             <div class="tambah">
-                <a href="pages/tambah-poktan.php"><button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Kelompok</button></a>
+                <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-poktan" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Kelompok</a></button>
             </div>
             <table id="example" class="table table-striped " style="width:100%">
                 <thead>
