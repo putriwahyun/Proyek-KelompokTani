@@ -7,7 +7,7 @@
             <div class="user-wrapper">
                 <img src="bxs-user-circle.svg" width="40px" height="40px" alt="">
                 <div>
-                <h6>Admin</h6>
+                    <h6>Admin</h6>
                 </div>
             </div>
         </header>
@@ -29,23 +29,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="col">1</th>
-                        <td scope="col">Greselia Putri</th>
-                        <td scope="col">20 Oktober 2021</th>
-                        <td scope="col">Tunggorono Jombang</th>
-                        <td scope="col">Pembuatan Pupuk Organik</th>
-                        <td scope="col">
-                            <a href="/pages/edit-penyuluhan.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                            <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
-                        </td>
-                    </tr>
+                    <?php
+                    $nomor = 1;
+                    $query = "SELECT * FROM tbpenyuluhan";
+                    $q_tampil_penyuluhan = mysqli_query($db, $query);
+
+                    if (mysqli_num_rows($q_tampil_penyuluhan) > 0) {
+                        while ($r_tampil_penyuluhan = mysqli_fetch_array($q_tampil_penyuluhan)) {
+                    ?>
+                            <tr>
+                                <td><?php echo $nomor; ?></td>
+                                <td><?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?></td>
+                                <td><?php echo $r_tampil_penyuluhan['nm_penyuluh']; ?></td>
+                                <td><?php echo $r_tampil_penyuluhan['tgl_penyuluhan']; ?></td>
+                                <td><?php echo $r_tampil_penyuluhan['tempat']; ?></td>
+                                <td><?php echo $r_tampil_penyuluhan['tema']; ?></td>
+                                <td>
+                                    <a href="index.php?p=edit-penyuluhan&kd_penyuluhan=<?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
+                                    <button type="button" class="btn btn-danger"><a href="proses/penyuluhan-hapus.php?kd_penyuluhan=<?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
+                                </td>
+                            </tr>
+                    <?php
+                            $nomor++;
+                        }
+                    } else {
+                        echo "";
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
     </div>
-    <script>$(document).ready(function() {
-        $('#example').DataTable();
-        } );
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
     </script>
 </body>

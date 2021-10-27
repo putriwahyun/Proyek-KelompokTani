@@ -14,7 +14,7 @@
 
     <div class="container">
       <div class="tambah">
-        <button type="button" class="btn btn-primary"><a href="pages/tambah-anggota.php" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
+        <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-anggota" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
         <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
@@ -44,8 +44,8 @@
                 <td><?php echo $r_tampil_anggota['alamat']; ?></td>
                 <td><?php echo $r_tampil_anggota['luas_tanam']; ?></td>
                 <td>
-                  <a href="index.php?p=edit-anggota&nik=<?php echo $r_tampil_anggota['nik'];?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                  <button type="button" class="btn btn-danger"><a href="proses/anggota-hapus.php?nik=<?php echo $r_tampil_anggota['nik'];?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
+                  <a href="index.php?p=edit-anggota&nik=<?php echo $r_tampil_anggota['nik']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
+                  <button type="button" class="btn btn-danger"><a href="proses/anggota-hapus.php?nik=<?php echo $r_tampil_anggota['nik']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
                 </td>
               </tr>
           <?php

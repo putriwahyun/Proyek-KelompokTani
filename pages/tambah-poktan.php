@@ -8,7 +8,7 @@
 </head>
 <body>
 <div style="border:0; padding:10px; width:auto; height:auto;">
-<form action="action-input-data.php" method="POST" name="form-input-data">
+<form action="proses/tambah-poktan-proses.php" method="POST" name="form-input-data">
     <div class="latar" style="width: auto; background-color: teal; padding: 5px; border-radius: 5px; text-align: center;">
         <h3 style="color: white;">Tambah Data Kelompok Tani</h3>
     </div>
@@ -18,15 +18,20 @@
 				<td width="25%"> </td>
 		</tr>
 
+		<tr height="46">
+			<td> </td>
+			<td>Kode</td>
+			<td><input type="text" name="kd_poktan" size="40" maxlength="30" /></td>
+		</tr>
         <tr height="46">
 			<td> </td>
 			<td>Nama Kelompok Tani</td>
-			<td><input type="text" name="nik" size="40" maxlength="30" /></td>
+			<td><input type="text" name="nm_poktan" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="46">
 			<td> </td>
 			<td>Nama Ketua</td>
-			<td><input type="text" name="nama" size="40" maxlength="30" /></td>
+			<td><input type="text" name="nm_ketua" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="46">
 			<td> </td>
@@ -36,7 +41,7 @@
         <tr height="46">
 			<td> </td>
 			<td>Kelas</td>
-			<td><input type="text" name="nosppt" size="40" maxlength="30" /></td>
+			<td><input type="text" name="kelas" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="46" width="100">
 			<td> </td>

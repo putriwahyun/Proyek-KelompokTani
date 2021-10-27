@@ -7,7 +7,7 @@
             <div class="user-wrapper">
                 <img src="bxs-user-circle.svg" width="40px" height="40px" alt="">
                 <div>
-                <h6>Admin</h6>
+                    <h6>Admin</h6>
                 </div>
             </div>
         </header>
@@ -29,23 +29,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="col">1</td>
-                        <td scope="col">Kelompok Tani Makmur</td>
-                        <td scope="col">Makmur</td>
-                        <td scope="col">Dsn. Gabus Ds. Gabus</th>
-                        <td scope="col">Pemula</td>
-                        <td scope="col">
-                            <a href="/pages/edit-poktan.php"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                            <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
-                        </td>
-                    </tr>
+                    <?php
+                    $nomor = 1;
+                    $query = "SELECT * FROM tbpoktan";
+                    $q_tampil_poktan = mysqli_query($db, $query);
+
+                    if (mysqli_num_rows($q_tampil_poktan) > 0) {
+                        while ($r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan)) {
+                    ?>
+                            <tr>
+                                <td><?php echo $nomor; ?></td>
+                                <td><?php echo $r_tampil_poktan['kd_poktan']; ?></td>
+                                <td><?php echo $r_tampil_poktan['nm_poktan']; ?></td>
+                                <td><?php echo $r_tampil_poktan['nm_ketua']; ?></td>
+                                <td><?php echo $r_tampil_poktan['alamat']; ?></td>
+                                <td><?php echo $r_tampil_poktan['kelas']; ?></td>
+                                <td>
+                                    <a href="index.php?p=edit-poktan&kd_poktan=<?php echo $r_tampil_poktan['kd_poktan']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
+                                    <button type="button" class="btn btn-danger"><a href="proses/poktan-hapus.php?kd_poktan=<?php echo $r_tampil_poktan['kd_poktan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
+                                </td>
+                            </tr>
+                    <?php
+                            $nomor++;
+                        }
+                    } else {
+                        echo "";
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
     </div>
-    <script>$(document).ready(function() {
-        $('#example').DataTable();
-        } );
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
     </script>
 </body>
