@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style_login.css">
 </head>
 <body>
-    <div style="color: black; position: absolute; left: 330px; top: 110px; font-size: 40px; font-weight: bold;">
+    <div style="color: black; position: absolute; left: 390px; top: 110px; font-size: 40px; font-weight: bold;">
         GAPOKTAN KECAMATAN JOMBANG
     </div>
     <div class="container">
