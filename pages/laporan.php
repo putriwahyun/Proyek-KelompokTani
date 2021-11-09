@@ -14,10 +14,9 @@
 
     <div class="container">
       <div class="tambah">
-        <button type="button" class="btn btn-primary"><i class='bx bxs-user-plus'></i>Tambah Anggota</button>
         <select name="level" id="level" style="width: 20%">
-            <option value="pilih" selected disabled>Pilih Desa</option>
-            <option value="Ds. Gabus">Desa Gabus</option>
+            <option value="pilih" selected disabled>Pilih Kelompok Tani</option>
+            <option value="Ds. Gabus"></option>
             <option value="Ds. Tunggorono">Desa Tunggorono</option>
             <option value="Ds. Jombang">Desa Jombang</option>
         </select>
@@ -26,25 +25,35 @@
         <thead>
           <tr>
             <th scope="col">No</th>
+            <th scope="col">Nama Poktan</th>
             <th scope="col">Jumlah Anggota</th>
             <th scope="col">Bantuan Diterima</th>
             <th scope="col">Jumlah Penyuluhan</th>
-            <th scope="col">Jumlah Gapoktan</th>
-            <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-              <td scope="col">1</td>
-              <td scope="col">15</td>
-              <td scope="col">Diesel</td>
-              <td scope="col">1</td>
-              <td scope="col">70</td>
-              <td scope="col">
-                <button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button>
-                <button type="button" class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
-              </td>
-          </tr>
+          <?php
+          $nomor = 1;
+          $query = "SELECT nm_poktan, (SELECT COUNT(*) FROM tbanggota) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan) AS jmlpenyuluhan FROM tbpoktan";
+          $q_tampil_poktan = mysqli_query($db, $query);
+
+          if (mysqli_num_rows($q_tampil_poktan) > 0) {
+              while ($r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan)) {
+          ?>
+                  <tr>
+                      <td><?php echo $nomor; ?></td>
+                      <td><?php echo $r_tampil_poktan['nm_poktan']; ?></td>
+                      <td><?php echo $r_tampil_poktan['jmlanggota']; ?></td>
+                      <td><?php echo $r_tampil_poktan['nmbantuan']; ?></td>
+                      <td><?php echo $r_tampil_poktan['jmlpenyuluhan']; ?></td>
+                  </tr>
+          <?php
+                  $nomor++;
+              }
+          } else {
+              echo "";
+          }
+          ?>
         </tbody>
       </table>
     </div>

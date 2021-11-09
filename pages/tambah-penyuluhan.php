@@ -31,7 +31,7 @@
 		<tr height="46">
 			<td> </td>
 			<td>Tanggal Penyuluhan</td>
-			<td><input type="text" name="tgl_penyuluhan" size="40" maxlength="30" /></td>
+			<td><input type="date" name="tgl_penyuluhan" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="46">
 			<td> </td>

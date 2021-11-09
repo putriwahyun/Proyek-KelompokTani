@@ -36,7 +36,7 @@
 		<tr height="46">
 			<td> </td>
 			<td>Tahun Pembuatan</td>
-			<td><input type="text" name="tahun" size="40" maxlength="30" /></td>
+			<td><input type="date" name="tahun" size="40" maxlength="30" /></td>
 		</tr>
         <tr height="46">
 			<td> </td>
