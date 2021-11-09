@@ -14,7 +14,7 @@
     </div>
 	<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr height="20">
-				<td width="10%"> </td>
+				<td width="40%"> </td>
 				<td width="25%"> </td>
 		</tr>
 
@@ -38,10 +38,15 @@
 			<td>Alamat</td>
 			<td><input type="text" name="alamat" size="40" maxlength="30" /></td>
 		</tr>
-        <tr height="46">
+		<tr height="46">
 			<td> </td>
 			<td>Kelas</td>
-			<td><input type="text" name="kelas" size="40" maxlength="30" /></td>
+			<td><select name="kelas" id="kelas" style="width: 200px;">
+				<option value="Pemula">Pemula</option>
+				<option value="Lanjut">Lanjut</option>
+				<option value="Madya">Madya</option>
+				<option value="Utama">Utama</option>
+			</select></td>
 		</tr>
 		<tr height="46" width="100">
 			<td> </td>

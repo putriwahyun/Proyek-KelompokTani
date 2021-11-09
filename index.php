@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIDEBAR</title>
+    <title>GAPOKTAN</title>
 </head>
 
 <body>
