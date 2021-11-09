@@ -20,7 +20,7 @@
     </div>
 	<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr height="20">
-				<td width="10%"> </td>
+				<td width="40%"> </td>
 				<td width="25%"> </td>
 		</tr>
 
