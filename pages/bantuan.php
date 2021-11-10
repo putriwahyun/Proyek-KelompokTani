@@ -77,6 +77,7 @@
                                 <td><?php echo $nomor; ?></td>
                                 <td><?php echo $r_tampil_bantuan['kd_bantuan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['nm_bantuan']; ?></td>
+                                <td><?php echo $r_tampil_bantuan['nm_poktan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['no_reg']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['tahun']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['sumber']; ?></td>

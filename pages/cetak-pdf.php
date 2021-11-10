@@ -24,23 +24,23 @@ include '../koneksi.php';
                     <?php
                         $nomor = 1;
                         $query = "SELECT * FROM tbanggota";
-                        $q_tampil_transaksi = mysqli_query($db, $query);
+                        $q_tampil_pdf = mysqli_query($db, $query);
 
-                        if(mysqli_num_rows($q_tampil_transaksi) > 0){
-                            while($r_tampil_transaksi=mysqli_fetch_array($q_tampil_transaksi)){
+                        if(mysqli_num_rows($q_tampil_pdf) > 0){
+                            while($r_tampil_pdf=mysqli_fetch_array($q_tampil_transaksi)){
                     ?>
                     <tr>
                         <td><?php echo $nomor;?></td>
-                        <td><?php echo $r_tampil_transaksi['nik'];?></td>
-                        <td><?php echo $r_tampil_transaksi['nm_anggota'];?></td>
-                        <td><?php echo $r_tampil_transaksi['alamat'];?></td>
-                        <td><?php echo $r_tampil_transaksi['no_sppt'];?></td>
-                        <td><?php echo $r_tampil_transaksi['luas_sppt'];?></td>
-                        <td><?php echo $r_tampil_transaksi['nm_ibu'];?></td>
-                        <td><?php echo $r_tampil_transaksi['koordinat'];?></td>
-                        <td><?php echo $r_tampil_transaksi['no_telp'];?></td>
-                        <td><?php echo $r_tampil_transaksi['komoditas'];?></td>
-                        <td><?php echo $r_tampil_transaksi['luas_tanam'];?></td>
+                        <td><?php echo $r_tampil_pdf['nik'];?></td>
+                        <td><?php echo $r_tampil_pdf['nm_anggota'];?></td>
+                        <td><?php echo $r_tampil_pdf['alamat'];?></td>
+                        <td><?php echo $r_tampil_pdf['no_sppt'];?></td>
+                        <td><?php echo $r_tampil_pdf['luas_sppt'];?></td>
+                        <td><?php echo $r_tampil_pdf['nm_ibu'];?></td>
+                        <td><?php echo $r_tampil_pdf['koordinat'];?></td>
+                        <td><?php echo $r_tampil_pdf['no_telp'];?></td>
+                        <td><?php echo $r_tampil_pdf['komoditas'];?></td>
+                        <td><?php echo $r_tampil_pdf['luas_tanam'];?></td>
                     </tr>
                         <?php
                                 $nomor++;

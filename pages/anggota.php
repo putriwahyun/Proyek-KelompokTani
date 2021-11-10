@@ -77,6 +77,7 @@
                 <td><?php echo $nomor; ?></td>
                 <td><?php echo $r_tampil_anggota['nik']; ?></td>
                 <td><?php echo $r_tampil_anggota['nm_anggota']; ?></td>
+                <td><?php echo $r_tampil_anggota['nm_poktan']; ?></td>
                 <td><?php echo $r_tampil_anggota['alamat']; ?></td>
                 <td><?php echo $r_tampil_anggota['luas_tanam']; ?></td>
                 <td>
