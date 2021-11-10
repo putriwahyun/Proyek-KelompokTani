@@ -1,3 +1,7 @@
+<?php
+include 'proses/list-poktan.php';
+?>
+
 <html>
 <head>
 	<title>Tambah Bantuan</title>
@@ -17,16 +21,37 @@
 				<td width="40%"> </td>
 				<td width="25%"> </td>
 		</tr>
-
 		<tr height="46">
 			<td> </td>
 			<td>Kode</td>
 			<td><input type="text" name="kd_bantuan" size="40" maxlength="30" /></td>
 		</tr>
+		<!-- <tr height="46">
+			<td> </td>
+			<td>Kode Kelompok Tani</td>
+			<td>
+				<select name="kd_poktan">
+					<?php foreach ($data_poktan as $poktan): ?>
+						<option value="<?php echo $poktan['kd_poktan'] ?>"><?php echo $poktan['kd_poktan'] ?></option>
+					<?php endforeach ?>
+				</select>
+			</td>
+		</tr> -->
         <tr height="46">
 			<td> </td>
 			<td>Nama Bantuan</td>
 			<td><input type="text" name="nm_bantuan" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="46">
+			<td> </td>
+			<td>Nama Kelompok Tani</td>
+			<td>
+				<select name="poktan">
+					<?php foreach ($data_poktan as $poktan): ?>
+						<option value="<?=$poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>"> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan']; ?></option>	
+					<?php endforeach ?>
+				</select>
+			</td>
 		</tr>
 		<tr height="46">
 			<td> </td>

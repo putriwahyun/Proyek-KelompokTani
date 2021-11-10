@@ -1,5 +1,8 @@
-<html>
+<?php
+include 'proses/list-poktan.php';
+?>
 
+<html>
 <head>
 	<title>Tambah Anggota</title>
 	<style type="text/css" media="screen">
@@ -40,6 +43,17 @@
 				</tr>
 				<tr height="46">
 					<td> </td>
+					<td>Nama Kelompok Tani</td>
+					<td>
+						<select name="poktan">
+							<?php foreach ($data_poktan as $poktan): ?>
+								<option value="<?=$poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>"> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan']; ?></option>	
+							<?php endforeach ?>
+						</select>
+					</td>
+				</tr>
+				<tr height="46">
+					<td> </td>
 					<td>Alamat</td>
 					<td><input type="text" name="alamat" size="40" maxlength="30" /></td>
 				</tr>
@@ -60,9 +74,9 @@
 				</tr>
 				<tr height="46">
 					<td> </td>
-					<td>Koordinat</td>
-					<td>X: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
-					<td>Y: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
+					<td name="koordinat">Koordinat</td>
+					<td>X: <input type="text" name="koordinatx" size="38" maxlength="30" /></td>
+					<td>Y: <input type="text" name="koordinaty" size="38" maxlength="30" /></td>
 				</tr>
 				<tr height="46">
 					<td> </td>
