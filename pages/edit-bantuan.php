@@ -36,6 +36,17 @@
 		</tr>
 		<tr height="46">
 			<td> </td>
+			<td>Nama Kelompok Tani</td>
+			<td>
+				<select name="poktan">
+					<?php foreach ($data_poktan as $poktan): ?>
+						<option value="<?php echo $poktan['kd_poktan'] ?>" <?php echo ($poktan['kd_poktan'] == $r_tampil_bantuan['kd_poktan']) ? 'selected' : '' ; ?> ><?php echo $poktan['nm_poktan'] ?></option>	
+					<?php endforeach ?>
+				</select>
+			</td>
+		</tr>
+		<tr height="46">
+			<td> </td>
 			<td>No Registrasi</td>
 			<td><input type="text" name="no_reg" value="<?php echo $r_tampil_bantuan['no_reg'];?>" size="40" maxlength="30" /></td>
 		</tr>

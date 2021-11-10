@@ -57,7 +57,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Kode</th>
                         <th scope="col">Nama Bantuan</th>
-                        <th scope="col">Nama Kelompok Tani</th>
+                        <th scope="col">Nama Poktan</th>
                         <th scope="col">No Registrasi</th>
                         <th scope="col">Tahun Pembuatan</th>
                         <th scope="col">Sumber Anggaran</th>
