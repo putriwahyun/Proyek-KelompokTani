@@ -14,7 +14,7 @@
             display: none;
             position: absolute;
             background-color: #f1f1f1;
-            min-width: 50px;
+            min-width: 150px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
         }
@@ -50,7 +50,13 @@
     <div class="container">
       <div class="tambah">
         <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-anggota" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
-        <button type="button" class="btn btn-success"><a href="pages/cetak-pdf.php" style="color:white; text-decoration: none"><i class='bx bxs-printer'></i></i>Cetak</button>
+        <div class="dropdown">
+        <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
+              <div class="dropdown-content">
+                  <a href="ekspor_pdf/ekspor_pdf_anggota.php">Cetak PDF</a>
+                  <a href="ekspor_excel/ekspor_excel_anggota.php">Cetak Excel</a>
+              </div>
+          </div>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>

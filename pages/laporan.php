@@ -51,7 +51,7 @@
       <div class="tambah">
         <select name="level" id="level" style="width: 20%">
             <option value="pilih" selected disabled>Pilih Kelompok Tani</option>
-            <option value="Ds. Gabus"></option>
+            <option value="Ds. Gabus">Desa Gabus</option>
             <option value="Ds. Tunggorono">Desa Tunggorono</option>
             <option value="Ds. Jombang">Desa Jombang</option>
         </select>
