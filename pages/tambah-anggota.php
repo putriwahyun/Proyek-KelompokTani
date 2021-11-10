@@ -38,18 +38,8 @@ include 'proses/list-poktan.php';
 				</tr>
 				<tr height="40">
 					<td> </td>
-					<td>Kode Kelompok Tani</td>
-					<td><input type="text" name="kd_poktan" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
 					<td>Nama Anggota</td>
 					<td><input type="text" name="nm_anggota" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
-					<td>Nama Kelompok Tani</td>
-					<td><input type="text" name="nm_poktan" size="40" maxlength="30" /></td>
 				</tr>
 				<tr height="40">
 					<td> </td>
