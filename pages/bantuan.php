@@ -57,6 +57,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Kode</th>
                         <th scope="col">Nama Bantuan</th>
+                        <th scope="col">Nama Kelompok Tani</th>
                         <th scope="col">No Registrasi</th>
                         <th scope="col">Tahun Pembuatan</th>
                         <th scope="col">Sumber Anggaran</th>
@@ -76,6 +77,7 @@
                                 <td><?php echo $nomor; ?></td>
                                 <td><?php echo $r_tampil_bantuan['kd_bantuan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['nm_bantuan']; ?></td>
+                                <td><?php echo $r_tampil_bantuan['nm_poktan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['no_reg']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['tahun']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['sumber']; ?></td>
