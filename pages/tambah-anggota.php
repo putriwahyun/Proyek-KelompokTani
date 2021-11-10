@@ -23,63 +23,73 @@
 				<h3 style="color: white;">Tambah Data Anggota Kelompok Tani</h3>
 			</div>
 			<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr height="20">
+				<tr height="15">
 					<td width="20%"> </td>
 					<td width="25%"> </td>
 				</tr>
 
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>NIK</td>
 					<td><input type="text" name="nik" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
+					<td> </td>
+					<td>Kode Kelompok Tani</td>
+					<td><input type="text" name="kd_poktan" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
 					<td> </td>
 					<td>Nama Anggota</td>
 					<td><input type="text" name="nm_anggota" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
+					<td> </td>
+					<td>Nama Kelompok Tani</td>
+					<td><input type="text" name="nm_poktan" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
 					<td> </td>
 					<td>Alamat</td>
 					<td><input type="text" name="alamat" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>No SPPT</td>
 					<td><input type="text" name="no_sppt" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Luas SPPT</td>
 					<td><input type="text" name="luas_sppt" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Nama Ibu</td>
 					<td><input type="text" name="nm_ibu" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Koordinat</td>
 					<td>X: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
-					<td>Y: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
+					<!-- <td>Y: <input type="text" name="koordinati" size="38" maxlength="30" /></td> -->
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>No Telepon</td>
 					<td><input type="text" name="no_telp" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Komoditas</td>
 					<td><input type="text" name="komoditas" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Luas Tanam</td>
 					<td><input type="text" name="luas_tanam" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46" width="100">
+				<tr height="40" width="100">
 					<td> </td>
 					<td> </td>
 					<td><input type="submit" name="Submit" value="Submit">
