@@ -50,7 +50,7 @@
     <div class="container">
       <div class="tambah">
         <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-anggota" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
-        <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
+        <button type="button" class="btn btn-success"><a href="pages/cetak-pdf.php" style="color:white; text-decoration: none"><i class='bx bxs-printer'></i></i>Cetak</button>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>
@@ -58,6 +58,7 @@
             <th scope="col">No</th>
             <th scope="col">NIK</th>
             <th scope="col">Nama</th>
+            <th scope="col">Nama Poktan</th>
             <th scope="col">Alamat</th>
             <th scope="col">Luas Tanam</th>
             <th scope="col">Aksi</th>
