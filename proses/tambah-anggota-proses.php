@@ -7,15 +7,10 @@ $alamat = $_POST['alamat'];
 $no_sppt = $_POST['no_sppt'];
 $luas_sppt = $_POST['luas_sppt'];
 $nm_ibu = $_POST['nm_ibu'];
-$koordinat = $_POST['koordinatx'].' '.$_POST['koordinaty'];
+$koordinat = $_POST['koordinat	'];
 $no_telp = $_POST['no_telp	'];
 $komoditas = $_POST['komoditas'];
 $luas_tanam = $_POST['luas_tanam'];
-
-$poktan = $_POST['poktan'];
-$pisah_datapoktan = explode(" ", $poktan);
-$kd_poktan = $pisah_datapoktan[0];
-$nm_poktan = $pisah_datapoktan[1].' '.$pisah_datapoktan[2].' '.$pisah_datapoktan[3].' '.$pisah_datapoktan[4].' '.$pisah_datapoktan[5];
 
 if(isset($_POST['Submit'])){
     extract($_POST);

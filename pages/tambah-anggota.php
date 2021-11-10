@@ -74,9 +74,9 @@ include 'proses/list-poktan.php';
 				</tr>
 				<tr height="46">
 					<td> </td>
-					<td name="koordinat">Koordinat</td>
-					<td>X: <input type="text" name="koordinatx" size="38" maxlength="30" /></td>
-					<td>Y: <input type="text" name="koordinaty" size="38" maxlength="30" /></td>
+					<td>Koordinat</td>
+					<td>X: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
+					<td>Y: <input type="text" name="koordinat" size="38" maxlength="30" /></td>
 				</tr>
 				<tr height="46">
 					<td> </td>
