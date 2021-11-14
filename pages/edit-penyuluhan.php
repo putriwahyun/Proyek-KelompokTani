@@ -1,4 +1,5 @@
 <?php 
+	include 'proses/list-poktan.php';
     $kd_penyuluhan = $_GET['kd_penyuluhan'];
     $q_tampil_penyuluhan = mysqli_query($db, "SELECT * FROM tbpenyuluhan WHERE kd_penyuluhan = '$kd_penyuluhan'");
     $r_tampil_penyuluhan = mysqli_fetch_array($q_tampil_penyuluhan);
@@ -33,6 +34,17 @@
 			<td> </td>
 			<td>Nama Penyuluh</td>
 			<td><input type="text" name="nm_penyuluh" value="<?php echo $r_tampil_penyuluhan['nm_penyuluh'];?>" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height=46>
+			<td> </td>
+			<td>Nama Kelompok Tani</td>
+			<td>
+				<select name="poktan">
+					<?php foreach ($data_poktan as $poktan): ?>
+						<option value="<?php echo $poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>" <?php echo ($poktan['kd_poktan'].' | '.$poktan['nm_poktan']== $r_tampil_penyuluhan['kd_poktan'].' | ' .$poktan['nm_poktan']) ? 'selected' : '' ; ?>> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan'] ?></option>
+					<?php endforeach ?>
+				</select>
+			</td>
 		</tr>
 		<tr height="46">
 			<td> </td>

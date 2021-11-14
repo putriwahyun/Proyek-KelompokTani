@@ -1,8 +1,6 @@
 <?php
 include '../koneksi.php';
 
-$kd_bantuan = $_POST['kd_bantuan'];
-$nm_bantuan = $_POST['nm_bantuan'];
 $no_reg = $_POST['no_reg'];
 $tahun = $_POST['tahun'];
 $sumber = $_POST['sumber'];
