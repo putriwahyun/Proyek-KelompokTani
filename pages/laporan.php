@@ -1,3 +1,7 @@
+<?php
+include 'proses/list-poktan.php';
+?>
+
 <head>
     <style>
         .dropbtn {
@@ -49,12 +53,16 @@
 
     <div class="container">
       <div class="tambah">
-        <select name="level" id="level" style="width: 20%">
-            <option value="pilih" selected disabled>Pilih Kelompok Tani</option>
-            <option value="Ds. Gabus">Desa Gabus</option>
-            <option value="Ds. Tunggorono">Desa Tunggorono</option>
-            <option value="Ds. Jombang">Desa Jombang</option>
-        </select>
+        <form method="post">
+          <select name="filter" id="level" style="width: 20%" onchange="test()">
+            <option value="pilih" selected>Semua Kelompok Tani</option>
+            <?php foreach ($data_poktan as $poktan): ?>
+              <option value="<?=$poktan['alamat'];?>"> <?php echo $poktan['alamat']; ?></option>	
+            <?php endforeach ?>
+          </select>
+          <input type="submit" name="search" value="Filter" class="tombol" style="padding-right: 5px; padding-left: 5px;">
+        </form>
+        
       </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>
@@ -69,7 +77,19 @@
         <tbody>
           <?php
           $nomor = 1;
-          $query = "SELECT nm_poktan, (SELECT COUNT(*) FROM tbanggota) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan) AS jmlpenyuluhan FROM tbpoktan";
+          if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $filter = trim(mysqli_real_escape_string($db, $_POST['filter']));
+            if ($filter != 'pilih') {
+              $sql = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$filter%'";
+              $query = $sql;
+            }else{
+              $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
+            }
+          } else {
+            $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
+          }
+
+          
           $q_tampil_poktan = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_poktan) > 0) {
@@ -77,7 +97,7 @@
           ?>
                   <tr>
                       <td><?php echo $nomor; ?></td>
-                      <td><?php echo $r_tampil_poktan['nm_poktan']; ?></td>
+                      <td><?php echo $r_tampil_poktan['nmpoktan']; ?></td>
                       <td><?php echo $r_tampil_poktan['jmlanggota']; ?></td>
                       <td><?php echo $r_tampil_poktan['nmbantuan']; ?></td>
                       <td><?php echo $r_tampil_poktan['jmlpenyuluhan']; ?></td>
@@ -93,8 +113,9 @@
       </table>
     </div>
   </div>
-  <script>$(document).ready(function() {
-    $('#example').DataTable();
-      } );
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable();
+    } ); 
   </script>
 </body>
