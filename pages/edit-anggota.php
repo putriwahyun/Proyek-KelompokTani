@@ -1,4 +1,5 @@
 <?php 
+	include 'proses/list-poktan.php';
     $nik = $_GET['nik'];
     $q_tampil_anggota = mysqli_query($db, "SELECT * FROM tbanggota WHERE nik = '$nik'");
     $r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota);
@@ -31,18 +32,19 @@
 		</tr>
 		<tr height="40">
 			<td> </td>
-			<td>Kode Kelompok Tani</td>
-			<td><input type="text" name="kd_poktan" value="<?php echo $r_tampil_anggota['kd_poktan']; ?>" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
 			<td>Nama Anggota</td>
-			<td><input type="text" name="nm_anggota" value="<?php echo $r_tampil_anggota['nm_anggota'];?>" size="40" maxlength="30" /></td>
+			<td><input type="text" name="nm_anggota" value="<?php echo $r_tampil_anggota['nm_anggota']; ?>" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="40">
 			<td> </td>
 			<td>Nama Kelompok Tani</td>
-			<td><input type="text" name="nm_poktan" value="<?php echo $r_tampil_anggota['nm_poktan']; ?>" size="40" maxlength="30" /></td>
+			<td>
+				<select name="poktan">
+					<?php foreach ($data_poktan as $poktan): ?>
+						<option value="<?php echo $poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>" <?php echo ($poktan['kd_poktan'].' | '.$poktan['nm_poktan']== $r_tampil_anggota['kd_poktan'].' | ' .$poktan['nm_poktan']) ? 'selected' : '' ; ?>> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan'] ?></option>
+					<?php endforeach ?>
+				</select>
+			</td>
 		</tr>
 		<tr height="40">
 			<td> </td>
