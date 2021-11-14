@@ -40,8 +40,7 @@
 			<td>
 				<select name="poktan">
 					<?php foreach ($data_poktan as $poktan): ?>
-						<option value="<?php echo $poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>" <?php echo ($poktan['kd_poktan'].' | '.$poktan['nm_poktan']== $r_tampil_bantuan['kd_poktan'].' | ' .$poktan['nm_poktan']) ? : '' ; ?>> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan'] ?></option>
-						<!-- <option value="<?php echo $poktan['kd_poktan'] ?>" <?php echo ($poktan['kd_poktan'] == $r_tampil_bantuan['kd_poktan']) ? 'selected' : '' ; ?> ><?php echo $poktan['nm_poktan'] ?></option>	 -->
+						<option value="<?php echo $poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>" <?php echo ($poktan['kd_poktan'].' | '.$poktan['nm_poktan']== $r_tampil_bantuan['kd_poktan'].' | ' .$poktan['nm_poktan']) ? 'selected' : '' ; ?>> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan'] ?></option>
 					<?php endforeach ?>
 				</select>
 			</td>
