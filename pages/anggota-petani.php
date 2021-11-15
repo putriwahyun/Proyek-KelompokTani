@@ -40,7 +40,7 @@
           <div class="dropdown">
               <button class="dropbtn"><img src="bxs-user-circle.svg" width="40px" height="40px" alt=""></button>
               <div class="dropdown-content">
-                  <a href="logout.php">Logout</a>
+                  <a href="logout-petani.php">Logout</a>
               </div>
           </div>
               <h6><?php echo$_SESSION['sesi']?></h6>
@@ -49,7 +49,7 @@
 
     <div class="container">
       <div class="tambah">
-        <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-anggota" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
+        <button type="button" class="btn btn-primary"><a href="index-petani.php?p=tambah-anggota-petani" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
         <div class="dropdown">
         <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
               <div class="dropdown-content">
@@ -73,7 +73,8 @@
         <tbody>
           <?php
           $nomor = 1;
-          $query = "SELECT * FROM tbanggota";
+          $nama_tani = $_SESSION['nm_poktan'];
+          $query = "SELECT * FROM tbanggota WHERE nm_poktan LIKE '%$nama_tani%'";
           $q_tampil_anggota = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_anggota) > 0) {
@@ -87,7 +88,7 @@
                 <td><?php echo $r_tampil_anggota['alamat']; ?></td>
                 <td><?php echo $r_tampil_anggota['luas_tanam']; ?></td>
                 <td>
-                  <a href="index.php?p=edit-anggota&nik=<?php echo $r_tampil_anggota['nik']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
+                  <a href="index-petani.php?p=edit-anggota-petani&nik=<?php echo $r_tampil_anggota['nik']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
                   <button type="button" class="btn btn-danger"><a href="proses/anggota-hapus.php?nik=<?php echo $r_tampil_anggota['nik']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
                 </td>
               </tr>
