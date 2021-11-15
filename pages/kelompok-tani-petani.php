@@ -40,17 +40,14 @@
                 <div class="dropdown">
                     <button class="dropbtn"><img src="bxs-user-circle.svg" width="40px" height="40px" alt=""></button>
                     <div class="dropdown-content">
-                        <a href="logout.php">Logout</a>
+                        <a href="logout-petani.php">Logout</a>
                     </div>
                 </div>
-                    <h6><?php echo$_SESSION['sesi']?></h6>
+                    <h6>Petani</h6>
             </div>
         </header>
 
         <div class="container">
-            <div class="tambah">
-                <button type="button" class="btn btn-primary"><a href="index.php?p=tambah-poktan" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Kelompok</a></button>
-            </div>
             <table id="example" class="table table-striped " style="width:100%">
                 <thead>
                     <tr>
@@ -60,7 +57,6 @@
                         <th scope="col">Nama Ketua</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">Kelas</th>
-                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,10 +75,6 @@
                                 <td><?php echo $r_tampil_poktan['nm_ketua']; ?></td>
                                 <td><?php echo $r_tampil_poktan['alamat']; ?></td>
                                 <td><?php echo $r_tampil_poktan['kelas']; ?></td>
-                                <td>
-                                    <a href="index.php?p=edit-poktan&kd_poktan=<?php echo $r_tampil_poktan['kd_poktan']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                                    <button type="button" class="btn btn-danger"><a href="proses/poktan-hapus.php?kd_poktan=<?php echo $r_tampil_poktan['kd_poktan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
-                                </td>
                             </tr>
                     <?php
                             $nomor++;

@@ -43,7 +43,7 @@
                         <a href="logout.php">Logout</a>
                     </div>
                 </div>
-                    <h6>Admin</h6>
+                    <h6><?php echo$_SESSION['sesi']?></h6>
             </div>
         </header>
 

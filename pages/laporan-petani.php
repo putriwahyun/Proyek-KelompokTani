@@ -44,7 +44,7 @@ include 'proses/list-poktan.php';
           <div class="dropdown">
               <button class="dropbtn"><img src="bxs-user-circle.svg" width="40px" height="40px" alt=""></button>
               <div class="dropdown-content">
-                  <a href="logout.php">Logout</a>
+                  <a href="logout-petani.php">Logout</a>
               </div>
           </div>
               <h6><?php echo$_SESSION['sesi']?></h6>
@@ -52,18 +52,6 @@ include 'proses/list-poktan.php';
     </header>
 
     <div class="container">
-      <div class="tambah">
-        <form method="post">
-          <select name="filter" id="level" style="width: 20%" onchange="test()">
-            <option value="pilih" selected>Semua Kelompok Tani</option>
-            <?php foreach ($data_poktan as $poktan): ?>
-              <option value="<?=$poktan['alamat'];?>"> <?php echo $poktan['alamat']; ?></option>	
-            <?php endforeach ?>
-          </select>
-          <input type="submit" name="search" value="Filter" class="tombol" style="padding-right: 5px; padding-left: 5px;">
-        </form>
-        
-      </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>
           <tr>
@@ -77,19 +65,9 @@ include 'proses/list-poktan.php';
         <tbody>
           <?php
           $nomor = 1;
-          if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $filter = trim(mysqli_real_escape_string($db, $_POST['filter']));
-            if ($filter != 'pilih') {
-              $sql = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$filter%'";
-              $query = $sql;
-            }else{
-              $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
-            }
-          } else {
-            $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
-          }
+          $alamat_tani = $_SESSION['alamat'];
 
-          
+          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
           $q_tampil_poktan = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_poktan) > 0) {
