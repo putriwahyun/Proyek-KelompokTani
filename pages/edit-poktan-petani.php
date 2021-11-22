@@ -34,27 +34,62 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 					<td width="25%"> </td>
 				</tr>
 
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Kode</td>
-					<td><input type="text" name="kd_poktan" value="<?php echo $r_tampil_poktan['kd_poktan']; ?>" size="40" maxlength="30" disabled /></td>
+					<td><input type="text" name="kd_poktan" value="<?php echo $r_tampil_poktan['kd_poktan']; ?>" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
+					<td> </td>
+					<td>Kelurahan</td>
+					<td><input type="text" name="kelurahan" value="<?php echo $r_tampil_poktan['kelurahan']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
 					<td> </td>
 					<td>Nama Kelompok Tani</td>
 					<td><input type="text" name="nm_poktan" value="<?php echo $r_tampil_poktan['nm_poktan']; ?>" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
 					<td> </td>
 					<td>Nama Ketua</td>
 					<td><input type="text" name="nm_ketua" value="<?php echo $r_tampil_poktan['nm_ketua']; ?>" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
+					<td> </td>
+					<td>No Telpon</td>
+					<td><input type="text" name="no_telp" value="<?php echo $r_tampil_poktan['no_telp']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Nama Sekretaris</td>
+					<td><input type="text" name="nm_sekretaris" value="<?php echo $r_tampil_poktan['nm_sekretaris']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Nama Bendahara</td>
+					<td><input type="text" name="nm_bendahara" value="<?php echo $r_tampil_poktan['nm_bendahara']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
 					<td> </td>
 					<td>Alamat</td>
 					<td><input type="text" name="alamat" value="<?php echo $r_tampil_poktan['alamat']; ?>" size="40" maxlength="30" /></td>
 				</tr>
-				<tr height="46">
+				<tr height="40">
+					<td> </td>
+					<td>Luas Lahan(Ha)</td>
+					<td><input type="text" name="luas_lahan" value="<?php echo $r_tampil_poktan['luas_lahan']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Jumlah Petani</td>
+					<td><input type="text" name="jumlah_petani" value="<?php echo $r_tampil_poktan['jumlah_petani']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Tahun Berdiri</td>
+					<td><input type="text" name="tahun_berdiri" value="<?php echo $r_tampil_poktan['tahun_berdiri']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
 					<td> </td>
 					<td>Kelas</td>
 					<?php
@@ -89,7 +124,12 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 					} 
 					?>
 				</tr>
-				<tr height="46" width="100">
+				<tr height="40">
+					<td> </td>
+					<td>Nama Penyuluh WKPP</td>
+					<td><input type="text" name="nm_penyuluh_wkpp" value="<?php echo $r_tampil_poktan['nm_penyuluh_wkpp']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40" width="100">
 					<td> </td>
 					<td> </td>
 					<td><input type="submit" name="simpan" value="Submit">

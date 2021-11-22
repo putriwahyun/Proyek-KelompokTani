@@ -13,32 +13,67 @@
         <h3 style="color: white;">Tambah Data Kelompok Tani</h3>
     </div>
 	<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
-		<tr height="20">
+		<tr height="15">
 				<td width="40%"> </td>
 				<td width="25%"> </td>
 		</tr>
 
-		<tr height="46">
+		<tr height="40">
 			<td> </td>
 			<td>Kode</td>
 			<td><input type="text" name="kd_poktan" size="40" maxlength="30" /></td>
 		</tr>
-        <tr height="46">
+		<tr height="40">
+			<td> </td>
+			<td>Kelurahan</td>
+			<td><input type="text" name="kelurahan" size="40" maxlength="30" /></td>
+		</tr>
+        <tr height="40">
 			<td> </td>
 			<td>Nama Kelompok Tani</td>
 			<td><input type="text" name="nm_poktan" size="40" maxlength="30" /></td>
 		</tr>
-		<tr height="46">
+		<tr height="40">
 			<td> </td>
 			<td>Nama Ketua</td>
 			<td><input type="text" name="nm_ketua" size="40" maxlength="30" /></td>
 		</tr>
-		<tr height="46">
+		<tr height="40">
+			<td> </td>
+			<td>No Telpon</td>
+			<td><input type="text" name="no_telp" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Nama Sekretaris</td>
+			<td><input type="text" name="nm_sekretaris" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Nama Bendahara</td>
+			<td><input type="text" name="nm_bendahara" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
 			<td> </td>
 			<td>Alamat</td>
 			<td><input type="text" name="alamat" size="40" maxlength="30" /></td>
 		</tr>
-		<tr height="46">
+		<tr height="40">
+			<td> </td>
+			<td>Luas Lahan(Ha)</td>
+			<td><input type="text" name="luas_lahan" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Jumlah Petani</td>
+			<td><input type="text" name="jumlah_petani" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Tahun Berdiri</td>
+			<td><input type="text" name="tahun_berdiri" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
 			<td> </td>
 			<td>Kelas</td>
 			<td><select name="kelas" id="kelas" style="width: 200px;">
@@ -48,7 +83,12 @@
 				<option value="Utama">Utama</option>
 			</select></td>
 		</tr>
-		<tr height="46" width="100">
+		<tr height="40">
+			<td> </td>
+			<td>Nama Penyuluh WKPP</td>
+			<td><input type="text" name="nm_penyuluh_wkpp" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40" width="100">
 			<td> </td>
 			<td> </td>
 			<td><input type="submit" name="Submit" value="Submit">   
