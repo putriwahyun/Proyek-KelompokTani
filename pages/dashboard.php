@@ -50,6 +50,8 @@
       <h4>Selamat Datang di Sistem Monitoring Kelompok Tani</h4>
     </div>
     <?php
+      $desa = mysqli_query($db, "SELECT alamat FROM tbpoktan");
+      $jml_desa = mysqli_num_rows($desa);
       $poktan = mysqli_query($db, "SELECT * FROM tbpoktan");
       $jml_poktan = mysqli_num_rows($poktan);
       $anggota = mysqli_query($db, "SELECT * FROM tbanggota");
@@ -61,7 +63,7 @@
           <div>
             <i class='bx bxs-home'></i>
             <span>Total Desa</span>
-            <h1><b>15</b></h1>
+            <h1><b><?php echo $jml_desa;?></b></h1>
             <h6>Dari Laporan Terakhir</h6>
           </div>
         </div>

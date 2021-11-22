@@ -28,7 +28,7 @@
 		<tr height="46">
 			<td> </td>
 			<td>Kode</td>
-			<td><input type="text" name="kd_penyuluhan" value="<?php echo $r_tampil_penyuluhan['kd_penyuluhan'];?>" size="40" maxlength="30" disabled /></td>
+			<td><input type="text" name="kd_penyuluhan" value="<?php echo $r_tampil_penyuluhan['kd_penyuluhan'];?>" size="40" maxlength="30" /></td>
 		</tr>
         <tr height="46">
 			<td> </td>
