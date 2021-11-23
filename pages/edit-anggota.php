@@ -3,7 +3,11 @@
     $nik = $_GET['nik'];
     $q_tampil_anggota = mysqli_query($db, "SELECT * FROM tbanggota WHERE nik = '$nik'");
     $r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota);
+	// $r_tampil_koordinatx = mysqli_fetch_array($q_tampil_anggota);
 
+	//ambil data koordinat 
+    $q_tampil_koordinat = mysqli_query($db, "SELECT SUBSTRING(koordinat, 1, 20) AS koordinatx, SUBSTRING(koordinat, 24) AS koordinaty FROM tbanggota");
+	$r_tampil_koordinat = mysqli_fetch_array($q_tampil_koordinat);
 ?>
 <html>
 <head>
@@ -69,7 +73,8 @@
         <tr height="40">
 			<td> </td>
 			<td>Koordinat</td>
-			<td><input type="text" name="koordinat" value="<?php echo $r_tampil_anggota['koordinat'];?>" size="40" maxlength="30" /></td>
+			<td><input type="text" name="koordinatx" value="<?php echo $r_tampil_koordinat['koordinatx'];?>" size="40" maxlength="30" /></td>
+			<td><input type="text" name="koordinaty" value="<?php echo $r_tampil_koordinat['koordinaty'];?>" size="40" maxlength="30" /></td>
 		</tr>
         <tr height="40">
 			<td> </td>

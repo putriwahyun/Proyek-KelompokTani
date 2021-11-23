@@ -35,26 +35,6 @@
 		</tr>
 		<tr height="40">
 			<td> </td>
-			<td>Nama Ketua</td>
-			<td><input type="text" name="nm_ketua" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
-			<td>No Telpon</td>
-			<td><input type="text" name="no_telp" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
-			<td>Nama Sekretaris</td>
-			<td><input type="text" name="nm_sekretaris" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
-			<td>Nama Bendahara</td>
-			<td><input type="text" name="nm_bendahara" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
 			<td>Alamat</td>
 			<td><input type="text" name="alamat" size="40" maxlength="30" /></td>
 		</tr>
@@ -72,6 +52,26 @@
 			<td> </td>
 			<td>Tahun Berdiri</td>
 			<td><input type="text" name="tahun_berdiri" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Nama Ketua</td>
+			<td><input type="text" name="nm_ketua" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>No Telpon</td>
+			<td><input type="text" name="no_telp" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Nama Sekretaris</td>
+			<td><input type="text" name="nm_sekretaris" size="40" maxlength="30" /></td>
+		</tr>
+		<tr height="40">
+			<td> </td>
+			<td>Nama Bendahara</td>
+			<td><input type="text" name="nm_bendahara" size="40" maxlength="30" /></td>
 		</tr>
 		<tr height="40">
 			<td> </td>

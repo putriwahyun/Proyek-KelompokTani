@@ -51,26 +51,6 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 				</tr>
 				<tr height="40">
 					<td> </td>
-					<td>Nama Ketua</td>
-					<td><input type="text" name="nm_ketua" value="<?php echo $r_tampil_poktan['nm_ketua']; ?>" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
-					<td>No Telpon</td>
-					<td><input type="text" name="no_telp" value="<?php echo $r_tampil_poktan['no_telp']; ?>" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
-					<td>Nama Sekretaris</td>
-					<td><input type="text" name="nm_sekretaris" value="<?php echo $r_tampil_poktan['nm_sekretaris']; ?>" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
-					<td>Nama Bendahara</td>
-					<td><input type="text" name="nm_bendahara" value="<?php echo $r_tampil_poktan['nm_bendahara']; ?>" size="40" maxlength="30" /></td>
-				</tr>
-				<tr height="40">
-					<td> </td>
 					<td>Alamat</td>
 					<td><input type="text" name="alamat" value="<?php echo $r_tampil_poktan['alamat']; ?>" size="40" maxlength="30" /></td>
 				</tr>
@@ -88,6 +68,26 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 					<td> </td>
 					<td>Tahun Berdiri</td>
 					<td><input type="text" name="tahun_berdiri" value="<?php echo $r_tampil_poktan['tahun_berdiri']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Nama Ketua</td>
+					<td><input type="text" name="nm_ketua" value="<?php echo $r_tampil_poktan['nm_ketua']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>No Telpon</td>
+					<td><input type="text" name="no_telp" value="<?php echo $r_tampil_poktan['no_telp']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Nama Sekretaris</td>
+					<td><input type="text" name="nm_sekretaris" value="<?php echo $r_tampil_poktan['nm_sekretaris']; ?>" size="40" maxlength="30" /></td>
+				</tr>
+				<tr height="40">
+					<td> </td>
+					<td>Nama Bendahara</td>
+					<td><input type="text" name="nm_bendahara" value="<?php echo $r_tampil_poktan['nm_bendahara']; ?>" size="40" maxlength="30" /></td>
 				</tr>
 				<tr height="40">
 					<td> </td>
