@@ -24,7 +24,7 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 
 <body>
 	<div style="border:0; padding:10px; width:auto; height:auto;">
-		<form action="proses/edit-poktan-proses.php" method="POST" name="form-input-data">
+		<form action="proses/edit-poktan-petani-proses.php" method="POST" name="form-input-data">
 			<div class="latar" style="width: auto; background-color: teal; padding: 5px; border-radius: 5px; text-align: center;">
 				<h3 style="color: white;">Edit Data Kelompok Tani</h3>
 			</div>

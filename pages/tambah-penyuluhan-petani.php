@@ -12,7 +12,7 @@ include 'proses/list-poktan.php';
 </head>
 <body>
 <div style="border:0; padding:10px; width:auto; height:auto;">
-<form action="proses/tambah-penyuluhan-proses.php" method="POST" name="form-input-data">
+<form action="proses/tambah-penyuluhan-petani-proses.php" method="POST" name="form-input-data">
     <div class="latar" style="width: auto; background-color: teal; padding: 5px; border-radius: 5px; text-align: center;">
         <h3 style="color: white;">Tambah Penyuluhan</h3>
     </div>
