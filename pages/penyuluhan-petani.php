@@ -84,7 +84,7 @@
                                 <td><?php echo $r_tampil_penyuluhan['tema']; ?></td>
                                 <td>
                                     <a href="index-petani.php?p=edit-penyuluhan-petani&kd_penyuluhan=<?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                                    <button type="button" class="btn btn-danger"><a href="proses/penyuluhan-hapus.php?kd_penyuluhan=<?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
+                                    <button type="button" class="btn btn-danger"><a href="proses/penyuluhan-petani-hapus.php?kd_penyuluhan=<?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
                                 </td>
                             </tr>
                     <?php

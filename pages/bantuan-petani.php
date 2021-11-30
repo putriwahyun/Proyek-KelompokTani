@@ -84,7 +84,7 @@
                                 <td><?php echo $r_tampil_bantuan['sumber']; ?></td>
                                 <td>
                                     <a href="index-petani.php?p=edit-bantuan-petani&kd_bantuan=<?php echo $r_tampil_bantuan['kd_bantuan']; ?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit'></i></button></a>
-                                    <button type="button" class="btn btn-danger"><a href="proses/bantuan-hapus.php?kd_bantuan=<?php echo $r_tampil_bantuan['kd_bantuan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
+                                    <button type="button" class="btn btn-danger"><a href="proses/bantuan-petani-hapus.php?kd_bantuan=<?php echo $r_tampil_bantuan['kd_bantuan']; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="tombol" style="color:white"><i class='bx bxs-trash-alt'></i></a></button>
                                 </td>
                             </tr>
                     <?php

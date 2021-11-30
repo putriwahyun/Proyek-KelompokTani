@@ -15,7 +15,7 @@
 </head>
 <body>
 <div style="border:0; padding:10px; width:auto; height:auto;">
-<form action="proses/edit-penyuluhan-proses.php" method="POST" name="form-input-data">
+<form action="proses/edit-penyuluhan-petani-proses.php" method="POST" name="form-input-data">
     <div class="latar" style="width: auto; background-color: teal; padding: 5px; border-radius: 5px; text-align: center;">
         <h3 style="color: white;">Edit Penyuluhan</h3>
     </div>
