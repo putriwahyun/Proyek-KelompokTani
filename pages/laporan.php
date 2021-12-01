@@ -1,5 +1,8 @@
 <?php
 include 'proses/list-poktan.php';
+$qr = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan) AS jmlpenyuluhan FROM tbpoktan";
+$k_tampil_poktan = mysqli_query($db, $qr);
+$p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
 ?>
 
 <head>
@@ -33,6 +36,7 @@ include 'proses/list-poktan.php';
     .dropdown-content a:hover {background-color: #ddd;}
     .dropdown:hover .dropdown-content {display: block;}
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 <body>
   <div class="main-content">
@@ -112,10 +116,46 @@ include 'proses/list-poktan.php';
         </tbody>
       </table>
     </div>
+    <div class="container" style="margin: 0 auto; padding-top: 10px;">
+      <div class="row" style="margin: 0 auto; padding-top: 10px;">
+          <div class="col-md-5" style="margin: 0 auto; padding-top: 10px;">
+              <div style="text-align: center; margin: 15px;"><?php echo 'Grafik Kelompok Tani Kecamatan Kota'; ?></div>
+              <canvas id="myChart" width="100" height="50"></canvas>
+          </div>
+      </div>
+    </div>
   </div>
   <script>
-    $(document).ready(function() {
-      $('#example').DataTable();
-    } ); 
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ["Anggota", "Bantuan", "Penyuluhan"],
+          datasets: [{
+              label: 'Jumlah Total',
+              data: [<?php echo $p_tampil_poktan['jmlanggota']; ?>, <?php echo $p_tampil_poktan['jmlbantuan']; ?>, <?php echo $p_tampil_poktan['jmlpenyuluhan']; ?>],
+              backgroundColor: [
+                  'rgba(255, 99, 132)',
+                  'rgba(54, 162, 235)',
+                  'rgba(255, 206, 86)',
+              ],
+              borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+          }
+      }
+    });
   </script>
 </body>

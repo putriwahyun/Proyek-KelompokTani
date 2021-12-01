@@ -40,9 +40,13 @@
 			<td>Nama Kelompok Tani</td>
 			<td>
 				<select name="poktan">
-					<?php foreach ($data_poktan as $poktan): ?>
-						<option value="<?php echo $poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>" <?php echo ($poktan['kd_poktan'].' | '.$poktan['nm_poktan']== $r_tampil_penyuluhan['kd_poktan'].' | ' .$poktan['nm_poktan']) ? 'selected' : '' ; ?>> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan'] ?></option>
-					<?php endforeach ?>
+					<?php 
+						$nama_tani = $_SESSION['nm_poktan'];
+						$query = "SELECT * FROM tbpoktan WHERE nm_poktan LIKE '%$nama_tani%'";
+						$k_tampil_anggota = mysqli_query($db, $query);
+						$p_tampil_anggota = mysqli_fetch_array($k_tampil_anggota)
+					?>
+					<option value="<?=$p_tampil_anggota['kd_poktan'].' '.$p_tampil_anggota['nm_poktan'];?>"> <?php echo $p_tampil_anggota['kd_poktan'].' | '.$p_tampil_anggota['nm_poktan']; ?></option>
 				</select>
 			</td>
 		</tr>
