@@ -46,9 +46,13 @@ include 'proses/list-poktan.php';
 					<td>Nama Kelompok Tani</td>
 					<td>
 						<select name="poktan">
-							<?php foreach ($data_poktan as $poktan): ?>
-								<option value="<?=$poktan['kd_poktan'].' '.$poktan['nm_poktan'];?>"> <?php echo $poktan['kd_poktan'].' | '.$poktan['nm_poktan']; ?></option>	
-							<?php endforeach ?>
+							<?php 
+								$nama_tani = $_SESSION['nm_poktan'];
+								$query = "SELECT * FROM tbpoktan WHERE nm_poktan LIKE '%$nama_tani%'";
+								$q_tampil_anggota = mysqli_query($db, $query);
+								$r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota)
+							?>
+							<option value="<?=$r_tampil_anggota['kd_poktan'].' '.$r_tampil_anggota['nm_poktan'];?>"> <?php echo $r_tampil_anggota['kd_poktan'].' | '.$r_tampil_anggota['nm_poktan']; ?></option>
 						</select>
 					</td>
 				</tr>

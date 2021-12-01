@@ -1,5 +1,9 @@
 <?php
 include 'proses/list-poktan.php';
+$alamat_tani = $_SESSION['alamat'];
+$qr = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
+$k_tampil_poktan = mysqli_query($db, $qr);
+$p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
 ?>
 
 <head>
@@ -33,6 +37,7 @@ include 'proses/list-poktan.php';
     .dropdown-content a:hover {background-color: #ddd;}
     .dropdown:hover .dropdown-content {display: block;}
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 <body>
   <div class="main-content">
@@ -65,9 +70,9 @@ include 'proses/list-poktan.php';
         <tbody>
           <?php
           $nomor = 1;
-          $alamat_tani = $_SESSION['alamat'];
+          
 
-          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT nm_bantuan FROM tbbantuan WHERE nm_poktan=nmpoktan) AS nmbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
+          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
           $q_tampil_poktan = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_poktan) > 0) {
@@ -77,7 +82,7 @@ include 'proses/list-poktan.php';
                       <td><?php echo $nomor; ?></td>
                       <td><?php echo $r_tampil_poktan['nmpoktan']; ?></td>
                       <td><?php echo $r_tampil_poktan['jmlanggota']; ?></td>
-                      <td><?php echo $r_tampil_poktan['nmbantuan']; ?></td>
+                      <td><?php echo $r_tampil_poktan['jmlbantuan']; ?></td>
                       <td><?php echo $r_tampil_poktan['jmlpenyuluhan']; ?></td>
                   </tr>
           <?php
@@ -90,10 +95,47 @@ include 'proses/list-poktan.php';
         </tbody>
       </table>
     </div>
+    <div class="container" style="margin: 0 auto; padding-top: 20px;">
+      <div class="row" style="margin: 0 auto; padding-top: 20px;">
+          <div class="col-md-5" style="margin: 0 auto; padding-top: 20px;">
+              <div style="text-align: center; margin: 15px;"><?php echo 'Grafik '.$p_tampil_poktan['nmpoktan']; ?></div>
+              <canvas id="myChart" width="100" height="50"></canvas>
+          </div>
+      </div>
+    </div>
   </div>
+  
   <script>
-    $(document).ready(function() {
-      $('#example').DataTable();
-    } ); 
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ["Anggota", "Bantuan", "Penyuluhan"],
+          datasets: [{
+              label: 'Jumlah Total',
+              data: [<?php echo $p_tampil_poktan['jmlanggota']; ?>, <?php echo $p_tampil_poktan['jmlbantuan']; ?>, <?php echo $p_tampil_poktan['jmlpenyuluhan']; ?>],
+              backgroundColor: [
+                  'rgba(255, 99, 132)',
+                  'rgba(54, 162, 235)',
+                  'rgba(255, 206, 86)',
+              ],
+              borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+          }
+      }
+    });
   </script>
 </body>
