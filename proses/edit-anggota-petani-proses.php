@@ -7,7 +7,7 @@
     $no_sppt = $_POST['no_sppt'];
     $luas_sppt = $_POST['luas_sppt'];
     $nm_ibu = $_POST['nm_ibu'];
-    $koordinat = $_POST['koordinat'];
+    $koordinat = $_POST['koordinatx']. ' , ' .$_POST['koordinaty'];
     $no_telp = $_POST['no_telp'];
     $komoditas = $_POST['komoditas'];
     $luas_tanam = $_POST['luas_tanam'];

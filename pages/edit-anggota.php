@@ -24,8 +24,8 @@
         <h3 style="color: white;">Edit Data Anggota Kelompok Tani</h3>
     </div>
 	<table width="auto" border="0" align="center" cellpadding="0" cellspacing="0">
-		<tr height="20">
-			<td width="40%"> </td>
+		<tr height="15">
+			<td width="20%"> </td>
 			<td width="25%"> </td>
 		</tr>
 
@@ -73,8 +73,8 @@
         <tr height="40">
 			<td> </td>
 			<td>Koordinat</td>
-			<td><input type="text" name="koordinatx" value="<?php echo $r_tampil_koordinat['koordinatx'];?>" size="40" maxlength="30" /></td>
-			<td><input type="text" name="koordinaty" value="<?php echo $r_tampil_koordinat['koordinaty'];?>" size="40" maxlength="30" /></td>
+			<td>X: <input type="text" name="koordinatx" value="<?php echo $r_tampil_koordinat['koordinatx'];?>" size="40" maxlength="30" /></td>
+			<td>Y: <input type="text" name="koordinaty" value="<?php echo $r_tampil_koordinat['koordinaty'];?>" size="40" maxlength="30" /></td>
 		</tr>
         <tr height="40">
 			<td> </td>
