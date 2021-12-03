@@ -43,14 +43,14 @@
                   <a href="logout-petani.php">Logout</a>
               </div>
           </div>
-              <h6><?php echo$_SESSION['sesi']?></h6>
+              <h6><?php echo $_SESSION['sesi']?></h6>
       </div>
     </header>
     <div class="welcome">
       <h4>Selamat Datang di Sistem Monitoring Kelompok Tani</h4>
     </div>
     <?php
-      $desa = mysqli_query($db, "SELECT alamat FROM tbpoktan");
+      $desa = mysqli_query($db, "SELECT kelurahan FROM tbpoktan");
       $jml_desa = mysqli_num_rows($desa);
       $poktan = mysqli_query($db, "SELECT * FROM tbpoktan");
       $jml_poktan = mysqli_num_rows($poktan);

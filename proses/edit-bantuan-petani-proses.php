@@ -1,6 +1,7 @@
 <?php 
     include '../koneksi.php';
 
+    $kd_bantuan = $_POST['kd_bantuan'];
     $alamat = $_POST['no_reg'];
     $no_sppt = $_POST['tahun'];
     $luas_sppt = $_POST['sumber'];

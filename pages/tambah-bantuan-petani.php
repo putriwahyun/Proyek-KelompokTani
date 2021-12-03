@@ -21,11 +21,6 @@ include 'proses/list-poktan.php';
 				<td width="40%"> </td>
 				<td width="25%"> </td>
 		</tr>
-		<tr height="46">
-			<td> </td>
-			<td>Kode</td>
-			<td><input type="text" name="kd_bantuan" size="40" maxlength="30" /></td>
-		</tr>
         <tr height="46">
 			<td> </td>
 			<td>Nama Bantuan</td>

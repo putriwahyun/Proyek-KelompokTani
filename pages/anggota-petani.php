@@ -50,13 +50,6 @@
     <div class="container">
       <div class="tambah">
         <button type="button" class="btn btn-primary"><a href="index-petani.php?p=tambah-anggota-petani" style="color:white; text-decoration: none"><i class='bx bxs-user-plus'></i>Tambah Anggota</a></button>
-        <div class="dropdown">
-        <button type="button" class="btn btn-success"><i class='bx bxs-printer'></i></i>Cetak</button>
-              <div class="dropdown-content">
-                  <a href="ekspor_pdf/ekspor_pdf_anggota.php">Cetak PDF</a>
-                  <a href="ekspor_excel/ekspor_excel_anggota.php">Cetak Excel</a>
-              </div>
-          </div>
       </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>

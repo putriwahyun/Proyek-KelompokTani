@@ -37,7 +37,7 @@ $r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 				<tr height="40">
 					<td> </td>
 					<td>Kode</td>
-					<td><input type="text" name="kd_poktan" value="<?php echo $r_tampil_poktan['kd_poktan']; ?>" size="40" maxlength="30" /></td>
+					<td><input type="text" name="kd_poktan" value="<?php echo $r_tampil_poktan['kd_poktan']; ?>" readonly size="40" maxlength="30" /></td>
 				</tr>
 				<tr height="40">
 					<td> </td>
