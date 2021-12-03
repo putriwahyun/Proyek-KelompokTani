@@ -55,7 +55,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Kode</th>
                         <th scope="col">Nama Penyuluh</th>
                         <th scope="col">Nama Poktan</th>
                         <th scope="col">Tanggal Penyuluhan</th>
@@ -76,7 +75,6 @@
                     ?>
                             <tr>
                                 <td><?php echo $nomor; ?></td>
-                                <td><?php echo $r_tampil_penyuluhan['kd_penyuluhan']; ?></td>
                                 <td><?php echo $r_tampil_penyuluhan['nm_penyuluh']; ?></td>
                                 <td><?php echo $r_tampil_penyuluhan['nm_poktan']; ?></td>
                                 <td><?php echo $r_tampil_penyuluhan['tgl_penyuluhan']; ?></td>

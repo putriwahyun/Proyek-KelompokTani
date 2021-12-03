@@ -1,7 +1,7 @@
 <?php
 include 'proses/list-poktan.php';
-$alamat_tani = $_SESSION['alamat'];
-$qr = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
+$kelurahan = $_SESSION['kelurahan'];
+$qr = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE kelurahan LIKE '%$kelurahan%'";
 $k_tampil_poktan = mysqli_query($db, $qr);
 $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
 ?>
@@ -72,7 +72,7 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
           $nomor = 1;
           
 
-          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE alamat LIKE '%$alamat_tani%'";
+          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE kelurahan LIKE '%$kelurahan%'";
           $q_tampil_poktan = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_poktan) > 0) {
@@ -97,7 +97,7 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
     </div>
     <div class="container" style="margin: 0 auto; padding-top: 20px;">
       <div class="row" style="margin: 0 auto; padding-top: 20px;">
-          <div class="col-md-5" style="margin: 0 auto; padding-top: 20px;">
+          <div class="col-md-5" style="margin: 0 auto; padding-top: 20px; padding-bottom: 70px;">
               <div style="text-align: center; margin: 15px;"><?php echo 'Grafik '.$p_tampil_poktan['nmpoktan']; ?></div>
               <canvas id="myChart" width="100" height="50"></canvas>
           </div>

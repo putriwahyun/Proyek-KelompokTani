@@ -43,7 +43,7 @@
                         <a href="logout.php">Logout</a>
                     </div>
                 </div>
-                    <h6><?php echo$_SESSION['sesi']?></h6>
+                    <h6><?php echo $_SESSION['sesi']?></h6>
             </div>
         </header>
 
@@ -55,7 +55,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Kode</th>
                         <th scope="col">Nama Bantuan</th>
                         <th scope="col">Nama Poktan</th>
                         <th scope="col">No Registrasi</th>
@@ -75,7 +74,6 @@
                     ?>
                             <tr>
                                 <td><?php echo $nomor; ?></td>
-                                <td><?php echo $r_tampil_bantuan['kd_bantuan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['nm_bantuan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['nm_poktan']; ?></td>
                                 <td><?php echo $r_tampil_bantuan['no_reg']; ?></td>

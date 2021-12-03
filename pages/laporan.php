@@ -56,18 +56,6 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
     </header>
 
     <div class="container">
-      <div class="tambah">
-        <form method="post">
-          <select name="filter" id="level" style="width: 20%" onchange="test()">
-            <option value="pilih" selected>Semua Kelompok Tani</option>
-            <?php foreach ($data_poktan as $poktan): ?>
-              <option value="<?=$poktan['nm_poktan'];?>"> <?php echo $poktan['nm_poktan']; ?></option>	
-            <?php endforeach ?>
-          </select>
-          <input type="submit" name="search" value="Filter" class="tombol" style="padding-right: 5px; padding-left: 5px;">
-        </form>
-        
-      </div>
       <table id="example" class="table table-striped " style="width:100%">
         <thead>
           <tr>
@@ -81,19 +69,8 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
         <tbody>
           <?php
           $nomor = 1;
-          if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $filter = trim(mysqli_real_escape_string($db, $_POST['filter']));
-            if ($filter != 'pilih') {
-              $sql = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan WHERE nm_poktan LIKE '%$filter%'";
-              $query = $sql;
-            }else{
-              $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
-            }
-          } else {
-            $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
-          }
-
           
+          $query = "SELECT nm_poktan AS nmpoktan, (SELECT COUNT(*) FROM tbanggota WHERE nm_poktan=nmpoktan) AS jmlanggota, (SELECT COUNT(*) FROM tbbantuan WHERE nm_poktan=nmpoktan) AS jmlbantuan, (SELECT COUNT(*) FROM tbpenyuluhan WHERE nm_poktan=nmpoktan) AS jmlpenyuluhan FROM tbpoktan";
           $q_tampil_poktan = mysqli_query($db, $query);
 
           if (mysqli_num_rows($q_tampil_poktan) > 0) {
@@ -118,7 +95,7 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
     </div>
     <div class="container" style="margin: 0 auto; padding-top: 10px;">
       <div class="row" style="margin: 0 auto; padding-top: 10px;">
-          <div class="col-md-5" style="margin: 0 auto; padding-top: 10px;">
+          <div class="col-md-5" style="margin: 0 auto; padding-top: 10px; padding-bottom: 10px;">
               <div style="text-align: center; margin: 15px;"><?php echo 'Grafik Kelompok Tani Kecamatan Kota'; ?></div>
               <canvas id="myChart" width="100" height="50"></canvas>
           </div>

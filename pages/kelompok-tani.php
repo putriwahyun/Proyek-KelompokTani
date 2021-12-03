@@ -55,7 +55,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Kode</th>
                         <th scope="col">Nama Kelompok Tani</th>
                         <th scope="col">Nama Ketua</th>
                         <th scope="col">Alamat</th>
@@ -74,7 +73,6 @@
                     ?>
                             <tr>
                                 <td><?php echo $nomor; ?></td>
-                                <td><?php echo $r_tampil_poktan['kd_poktan']; ?></td>
                                 <td><?php echo $r_tampil_poktan['nm_poktan']; ?></td>
                                 <td><?php echo $r_tampil_poktan['nm_ketua']; ?></td>
                                 <td><?php echo $r_tampil_poktan['alamat']; ?></td>

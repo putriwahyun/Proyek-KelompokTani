@@ -1,7 +1,6 @@
 <?php
 include '../koneksi.php';
 
-$kd_penyuluhan = $_POST['kd_penyuluhan'];
 $nm_penyuluh = $_POST['nm_penyuluh'];
 $tgl_penyuluhan = $_POST['tgl_penyuluhan'];
 $tempat = $_POST['tempat'];

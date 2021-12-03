@@ -20,11 +20,6 @@
 
 		<tr height="40">
 			<td> </td>
-			<td>Kode</td>
-			<td><input type="text" name="kd_poktan" size="40" maxlength="30" /></td>
-		</tr>
-		<tr height="40">
-			<td> </td>
 			<td>Kelurahan</td>
 			<td><input type="text" name="kelurahan" size="40" maxlength="30" /></td>
 		</tr>

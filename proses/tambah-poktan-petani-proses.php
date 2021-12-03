@@ -1,7 +1,6 @@
 <?php
     include '../koneksi.php';
 
-    $kd_poktan = $_POST['kd_poktan'];
     $kelurahan = $_POST['kelurahan'];
     $nm_poktan = $_POST['nm_poktan'];
     $nm_ketua = $_POST['nm_ketua'];
