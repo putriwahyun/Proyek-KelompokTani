@@ -96,7 +96,7 @@ $p_tampil_poktan = mysqli_fetch_array($k_tampil_poktan);
     <div class="container" style="margin: 0 auto; padding-top: 10px;">
       <div class="row" style="margin: 0 auto; padding-top: 10px;">
           <div class="col-md-5" style="margin: 0 auto; padding-top: 10px; padding-bottom: 10px;">
-              <div style="text-align: center; margin: 15px;"><?php echo 'Grafik Kelompok Tani Kecamatan Kota'; ?></div>
+              <div style="text-align: center; margin: 15px;"><?php echo 'Grafik Kelompok Tani Kecamatan Jombang'; ?></div>
               <canvas id="myChart" width="100" height="50"></canvas>
           </div>
       </div>

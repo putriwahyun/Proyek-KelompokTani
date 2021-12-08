@@ -3,9 +3,6 @@
     $kd_bantuan = $_GET['kd_bantuan'];
     $q_tampil_bantuan = mysqli_query($db, "SELECT * FROM tbbantuan WHERE kd_bantuan = '$kd_bantuan'");
     $r_tampil_bantuan = mysqli_fetch_array($q_tampil_bantuan);
-	$kd_poktan = $_GET['kd_poktan'];
-	$q_tampil_poktan = mysqli_query($db, "SELECT * FROM tbpoktan WHERE kd_poktan = '$kd_poktan'");
-	$r_tampil_poktan = mysqli_fetch_array($q_tampil_poktan);
 
 ?>
 <html>
@@ -50,22 +47,6 @@
 						$p_tampil_anggota = mysqli_fetch_array($k_tampil_anggota)
 					?>
 					<option value="<?=$p_tampil_anggota['kd_poktan'].' '.$p_tampil_anggota['nm_poktan'];?>"> <?php echo $p_tampil_anggota['kd_poktan'].' | '.$p_tampil_anggota['nm_poktan']; ?></option>
-				</select>
-			</td>
-		</tr>
-		<tr height="46">
-			<td> </td>
-			<td>Nama Kelompok Tani</td>
-			<td>
-				<select name="poktan">
-					<?php foreach ($data_poktan as $poktan): 
-						if ($poktan['kd_poktan'] == $r_tampil_poktan['kd_poktan']) {
-							# code...
-						}
-						?>
-						
-						<option value="<?php echo $poktan['kd_poktan'] ?>" <?php echo ($poktan['kd_poktan'] == $r_tampil_bantuan['kd_poktan']) ? 'selected' : '' ; ?> ><?php echo $poktan['nm_poktan'] ?></option>	
-					<?php endforeach ?>
 				</select>
 			</td>
 		</tr>
